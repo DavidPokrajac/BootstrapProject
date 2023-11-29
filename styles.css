@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: aliceblue;
+    margin: 0;
+}
+
+.profile-card {
+    background: linear-gradient(to bottom right, rgb(232, 177, 186) 20%, rgb(179, 220, 234) 80%);
+}
+
+.quick-links button {
+    background: rgb(4, 121, 160);
+}
+
+.navbar {
+    background: rgb(168, 207, 220);
+    font-family: 'Kanit', sans-serif;
+}
+
+.nav-item:hover {
+    background: steelblue;
+}
+
+.nav-item:hover a {
+    color: white !important;
+}
+
+main {
+    background: rgba(100, 178, 241, 0.1);
+}
+
+section ul {
+    position: relative;
+}
+
+section ul::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    bottom: -1.5rem;
+    left: -0.5rem;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom-left-radius: 10px;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 992px) {
+    header > div:first-of-type {
+        width: 90%;
+    }
+    .navbar-nav {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    section ul::before {
+        width: 0;
+        height: 0;
+    }
+    #linkovi img {
+        width: 50px;
+    }
+}
